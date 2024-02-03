@@ -70,7 +70,7 @@ console.log(pizza.tags[1])
 */
 
 const {price} = pizza
-console.log(price)
+// console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -80,7 +80,7 @@ console.log(price)
 */
 
 const {category} = pizza
-console.log(category)
+// console.log(category)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -200,9 +200,17 @@ const filteredFood = foodArr.filter(fudZ => fudZ.tags.includes(`painful`))
     
     Return the filtered array from the entire function
 */
+const filterByProperty = (property, number, type) => {
+    let looeegee
+    if(type === `above`){   
+        looeegee = foodArr.filter(fudX => fudX[property] > number)
+    } else {
+        looeegee = foodArr.filter(fudX => fudX[property] < number)
+    }
+    return looeegee
+}
 
-
-
+// const filteredFood = foodArr.filter(fudZ => fudZ.tags.includes(`painful`))
 
 /*
     Invoke the `filterByProperty` function passing
@@ -211,4 +219,7 @@ const filteredFood = foodArr.filter(fudZ => fudZ.tags.includes(`painful`))
     You'll have to console.log to see the filtered array
 */
 
-//CODE HERE
+const beans = filterByProperty(`price`, 30, `above`)
+const boons = filterByProperty(`popularity`, 900000, `below`)
+const biins = filterByProperty(`rating`, 1, `above`)
+console.log(beans, boons, biins)

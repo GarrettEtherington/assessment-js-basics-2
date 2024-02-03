@@ -54,8 +54,13 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 //CODE HERE
 
 const canWeDeliver = (zipcode) => {
-    
+    if (deliveryAreaZipCodes.includes(zipcode)){
+        return `You're in our delivery zone!`
+    } else {
+        return `sorry, we can't deliver to that address`
+    }
 }
+console.log(canWeDeliver(696969696))
 /* 
     Problem 2 Continued
 
@@ -73,7 +78,22 @@ const canWeDeliver = (zipcode) => {
     Name your new function `canWeDeliverTwo`.
 */
 
-// CODE HERE
+const canWeLoop = () => {
+    let canDeliver = false
+    for (i = 0; i < deliveryAreaZipCodes.length; i++) {
+        if (deliveryAreaZipCodes[i] === zipcode){
+            canDeliver = true
+        }
+    }
+    if (canDeliver){
+        return `You're in our delivery zone!`
+    } else {
+        return `sorry, we can't deliver to that address`
+    }
+}
+
+
+   
 
 
 //////////////////PROBLEM 3////////////////////
@@ -109,7 +129,8 @@ const deals = [
     to replace the 15 with a 10.
 */
 
-//CODE HERE
+const newDeal = deals[0].title.replace(`5`, `0`)
+console.log(newDeal)
 
 
 
@@ -126,4 +147,6 @@ const deals = [
     to be displaying wrong on the live site.
 */
 
-//CODE HERE
+const dealTheSequel = deals[1].desc.replace(`March`, `April`)
+const dealButNoWhitespace = dealTheSequel.replace(`   `, ``)
+console.log(dealButNoWhitespace)

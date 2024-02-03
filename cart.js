@@ -56,7 +56,7 @@ console.log(summedPrice)
 //CODE HERE
 
 const calcFinalPrice = (cartTotal, couponValue, tax) => {
-    
+    return cartTotal + tax * cartTotal - couponValue
 }
 
 console.log(calcFinalPrice)
@@ -82,7 +82,8 @@ console.log(calcFinalPrice)
 
 /*
     TEXT ANSWER HERE
-
+    if i was a resturaunt databse i'd have my customers names, address, payment information, and phone number
+    obviously a name would simply be a string, the address would also be a string due to the combination of numbers and letters. There can be a decent ammount when it comes to payment information so it's be best to fit that all in one array, wearas a phone number would be a string, again, due to the combination of numbers and characters.
 */
 
 /*
@@ -90,4 +91,9 @@ console.log(calcFinalPrice)
     guidelines.
 */
 
-//CODE HERE
+const consumorr = {
+    name: `Waltuh White`,
+    address: `308 Negra Arroyo Lane`,
+    paymentInfo: [`that weed card`, 110.65, [`a couple favors`, `blackmail`], `$45 in account`],
+    phoneNumber: `(833) 975-1455`
+}

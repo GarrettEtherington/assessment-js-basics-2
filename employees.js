@@ -103,7 +103,7 @@ class Manager extends employee {
     }
     
     addEmployee(emp){
-        this.employees.push() 
+        this.employees.push(emp) 
     }
 }
 
@@ -135,7 +135,7 @@ manager.getEmployees()
 */
 
 manager.addEmployee(`Coach`)
-
+manager.getEmployees()
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
